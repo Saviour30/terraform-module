@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../../CHILD/"
+  source = "../../CHILD/VPC"
 }
 
 module "vpc-app" {
@@ -11,5 +11,6 @@ module "vpc-app" {
 }
 
 module "app-server" {
-  source = "value"
+  source = "git::https://github.com/Saviour30/terraform-module.git//CHILD/EC2"
+  #source = "git@github.com/Saviour30/terraform-module//CHILD/EC2"
 }
