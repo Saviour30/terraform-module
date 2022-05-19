@@ -12,5 +12,8 @@ module "app-vpc" {
 
 module "app-server" {
   source = "git::https://github.com/Saviour30/terraform-module.git//CHILD/EC2"
+  subnet_id = module.app-vpc.public_subnet_id
 
 }
+
+
